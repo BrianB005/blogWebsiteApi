@@ -15,6 +15,9 @@ const PostSchema = new mongoose.Schema(
     image: {
       type: String,
     },
+    authorName: {
+      type: String,
+    },
     averageRating: {
       type: Number,
       default: 0,

@@ -4,6 +4,7 @@ const CustomError = require("../errors");
 const createPost = async (req, res) => {
   req.body.author = req.user.userId;
   // console.log(req.user.userId);
+  req.body.authorName = req.user.name;
 
   const { title, body } = req.body;
   if (!title || !body) {
