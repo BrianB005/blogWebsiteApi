@@ -26,7 +26,7 @@ const CommentSchema = new mongoose.Schema(
   },
   { timestamps: true }
 );
-ReviewSchema.index({ post: 1, user: 1 }, { unique: true });
+CommentSchema.index({ post: 1, user: 1 }, { unique: true });
 
 CommentSchema.statics.calculateRating = async function (postId) {
   const result = await this.aggregate([
